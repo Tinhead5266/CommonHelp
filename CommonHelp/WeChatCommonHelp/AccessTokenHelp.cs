@@ -31,6 +31,8 @@ namespace CommonHelp.WeChatCommonHelp
                 {
                     //获取
                     mAccessToken = GetAccessToken(appId, appSecret);
+                    CommonUtility.Logger.Info("AccessToken：" + mAccessToken);
+
                 }
                 return mAccessToken;
             }

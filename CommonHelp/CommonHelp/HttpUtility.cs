@@ -33,6 +33,7 @@ namespace CommonHelp.CommonHelp
         /// <param name="requestData">数据</param>
         public static string SendPostHttpRequest(string url, string contentType, string requestData)
         {
+            CommonUtility.Logger.Info("请求url：" + url);
             WebRequest request = HttpWebRequest.Create(url);
             request.Method = "POST";
             byte[] postBytes = null;
@@ -58,6 +59,7 @@ namespace CommonHelp.CommonHelp
 
                 }
             }
+            CommonUtility.Logger.Info("请求结果：" + result.ToJsJson());
             return result;
         }
 
@@ -70,6 +72,7 @@ namespace CommonHelp.CommonHelp
         /// <param name="requestData">数据</param>
         public static string SendGetHttpRequest(string url, string contentType)
         {
+            CommonUtility.Logger.Info("请求url：" + url);
             WebRequest request = HttpWebRequest.Create(url);
             request.Method = "GET";
             request.ContentType = contentType;
@@ -87,6 +90,7 @@ namespace CommonHelp.CommonHelp
                     }
                 }
             }
+            CommonUtility.Logger.Info("请求结果：" + result.ToJsJson());
             return result;
         }
 

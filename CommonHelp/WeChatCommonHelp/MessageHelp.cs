@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Xml;
 
 namespace CommonHelp
@@ -22,6 +21,24 @@ namespace CommonHelp
                     case "text":
                         responseContent = TextHandle(xmldoc);//接受文本消息处理
                         break;
+                    //case "image":
+                    //    responseContent = TextHandle(xmldoc);//接受图片消息处理
+                    //    break;
+                    //case "voice":
+                    //    responseContent = TextHandle(xmldoc);//接受语言消息处理
+                    //    break;
+                    //case "video":
+                    //    responseContent = TextHandle(xmldoc);//接受视频消息处理
+                    //    break;
+                    //case "shortvideo":
+                    //    responseContent = TextHandle(xmldoc);//接受小视频消息处理
+                    //    break;
+                    //case "location":
+                    //    responseContent = TextHandle(xmldoc);//接受地理位置消息处理
+                    //    break;
+                    //case "link":
+                    //    responseContent = TextHandle(xmldoc);//接受链接消息处理
+                    //    break;
                     default:
                         break;
                 }
@@ -64,6 +81,7 @@ namespace CommonHelp
             }
             return responseContent;
         }
+
         //接受文本消息
         public string TextHandle(XmlDocument xmldoc)
         {
